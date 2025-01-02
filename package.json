@@ -1,0 +1,116 @@
+{
+	"name": "@vandeurenglenn/shop-elements",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"build": "rollup -c",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/VandeurenGlenn/shop-elements.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/VandeurenGlenn/shop-elements/issues"
+	},
+	"homepage": "https://github.com/VandeurenGlenn/shop-elements#readme",
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^16.0.0",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^12.1.2",
+		"rimraf": "^6.0.1",
+		"rollup": "^4.29.1",
+		"rollup-plugin-auto-exports": "^1.0.8",
+		"rollup-plugin-material-symbols": "^2.1.6",
+		"tslib": "^2.8.1"
+	},
+	"dependencies": {
+		"@vandeurenglenn/lite": "^0.2.56",
+		"@vandeurenglenn/lite-elements": "^0.3.65"
+	},
+	"files": [
+		"exports"
+	],
+	"exports": {
+		".": {
+			"import": "./exports/elements.js",
+			"types": "./exports/elements.d.ts"
+		},
+		"./elements": {
+			"import": "./exports/elements.js",
+			"types": "./exports/elements.d.ts"
+		},
+		"./elements.js": {
+			"import": "./exports/elements.js",
+			"types": "./exports/elements.d.ts"
+		},
+		"./giftcard": {
+			"import": "./exports/giftcard.js",
+			"types": "./exports/giftcard/giftcard.d.ts"
+		},
+		"./giftcard.js": {
+			"import": "./exports/giftcard.js",
+			"types": "./exports/giftcard/giftcard.d.ts"
+		},
+		"./grid": {
+			"import": "./exports/grid.js",
+			"types": "./exports/sales/grid.d.ts"
+		},
+		"./grid.js": {
+			"import": "./exports/grid.js",
+			"types": "./exports/sales/grid.d.ts"
+		},
+		"./input": {
+			"import": "./exports/input.js",
+			"types": "./exports/sales/input.d.ts"
+		},
+		"./input.js": {
+			"import": "./exports/input.js",
+			"types": "./exports/sales/input.d.ts"
+		},
+		"./pad": {
+			"import": "./exports/pad.js",
+			"types": "./exports/sales/pad.d.ts"
+		},
+		"./pad.js": {
+			"import": "./exports/pad.js",
+			"types": "./exports/sales/pad.d.ts"
+		},
+		"./receipt": {
+			"import": "./exports/receipt.js",
+			"types": "./exports/sales/receipt.d.ts"
+		},
+		"./receipt.js": {
+			"import": "./exports/receipt.js",
+			"types": "./exports/sales/receipt.d.ts"
+		},
+		"./resize-sales-input-button": {
+			"import": "./exports/resize-sales-input-button.js",
+			"types": "./exports/utils/resize-sales-input-button.d.ts"
+		},
+		"./resize-sales-input-button.js": {
+			"import": "./exports/resize-sales-input-button.js",
+			"types": "./exports/utils/resize-sales-input-button.d.ts"
+		},
+		"./types": {
+			"import": "./exports/types.js",
+			"types": "./exports/types.d.ts"
+		},
+		"./types.js": {
+			"import": "./exports/types.js",
+			"types": "./exports/types.d.ts"
+		},
+		"./view": {
+			"import": "./exports/view.js",
+			"types": "./exports/sales/view.d.ts"
+		},
+		"./view.js": {
+			"import": "./exports/view.js",
+			"types": "./exports/sales/view.d.ts"
+		}
+	}
+}
