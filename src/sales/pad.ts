@@ -91,9 +91,9 @@ export class SalesPad extends LiteElement {
 
   render() {
     return html`
-      <sales-receipt @selection=${(event) => this.onReceiptSelection(event)}></sales-receipt>
+      <shop-sales-receipt @selection=${(event) => this.onReceiptSelection(event)}></shop-sales-receipt>
       <flex-it></flex-it>
-      <sales-input @input-click=${(event) => this.inputTap(event)}></sales-input>
+      <shop-sales-input @input-click=${(event) => this.inputTap(event)}></shop-sales-input>
     `
   }
 }
