@@ -46,7 +46,7 @@ export class ShopSalesView extends LiteElement {
           flex-direction: column;
           padding: 0;
         }
-        sales-pad {
+        shop-sales-pad {
           position: absolute;
           z-index: 0;
           pointer-events: none;

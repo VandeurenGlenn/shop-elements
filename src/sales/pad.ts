@@ -8,7 +8,7 @@ export class SalesPad extends LiteElement {
   currentSelectedProduct: string
   currentProductAmount: string = ''
 
-  @query('sales-receipt')
+  @query('shop-sales-receipt')
   accessor receipt: ShopSalesReceipt
 
   @property({ type: Boolean, reflect: true, attribute: 'is-mobile' }) accessor isMobile = false
