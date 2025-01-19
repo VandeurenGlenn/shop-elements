@@ -1,4 +1,4 @@
-import { html, css, LiteElement, customElement, query } from '@vandeurenglenn/lite'
+import { html, css, LiteElement, customElement, query, property } from '@vandeurenglenn/lite'
 import './receipt.js'
 import './input.js'
 import { ShopSalesReceipt } from './receipt.js'
@@ -10,6 +10,8 @@ export class SalesPad extends LiteElement {
 
   @query('sales-receipt')
   accessor receipt: ShopSalesReceipt
+
+  @property({ type: Boolean, reflect: true, attribute: 'is-mobile' }) accessor isMobile = false
 
   static styles = [
     css`
@@ -25,6 +27,20 @@ export class SalesPad extends LiteElement {
 
       shop-sales-receipt {
         margin-bottom: 24px;
+      }
+
+      :host([is-mobile]) {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0;
+        max-width: 100%;
+        inset: 0;
+      }
+
+      :host([is-mobile]) {
+        pointer-events: auto;
+        opacity: 1;
       }
     `
   ]
@@ -94,7 +110,7 @@ export class SalesPad extends LiteElement {
       <shop-sales-receipt
         part="receipt"
         @selection=${(event) => this.onReceiptSelection(event)}></shop-sales-receipt>
-      <flex-it></flex-it>
+
       <shop-sales-input
         part="input"
         @input-click=${(event) => this.inputTap(event)}></shop-sales-input>

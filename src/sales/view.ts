@@ -1,4 +1,4 @@
-import { html, css, LiteElement, customElement, query } from '@vandeurenglenn/lite'
+import { html, css, LiteElement, customElement, query, property } from '@vandeurenglenn/lite'
 import '@material/web/fab/fab.js'
 import './pad.js'
 import './grid.js'
@@ -9,11 +9,13 @@ import { CustomIcon } from '@vandeurenglenn/lite-elements/icon'
 export class ShopSalesView extends LiteElement {
   fabIcon = 'shopping_cart_checkout'
 
-  @query('sales-pad')
+  @query('shop-sales-pad')
   accessor salesPad
 
-  @query('sales-grid')
+  @query('shop-sales-grid')
   accessor grid
+
+  @property({ type: Boolean, reflect: true, attribute: 'is-mobile' }) accessor isMobile = false
 
   static styles = [
     css`
@@ -108,7 +110,7 @@ export class ShopSalesView extends LiteElement {
 
   render() {
     return html`
-      <shop-sales-pad></shop-sales-pad>
+      <shop-sales-pad .isMobile=${this.isMobile}></shop-sales-pad>
       <shop-sales-grid @product-click=${(event) => this.addProductToReceipt(event)}></shop-sales-grid>
       <md-fab @click=${() => this.togglePad()}>
         <custom-icon
