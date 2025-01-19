@@ -5,8 +5,8 @@ import './grid.js'
 import '@vandeurenglenn/lite-elements/button.js'
 import { CustomIcon } from '@vandeurenglenn/lite-elements/icon'
 
-@customElement('sales-view')
-export class SalesView extends LiteElement {
+@customElement('shop-sales-view')
+export class ShopSalesView extends LiteElement {
   fabIcon = 'shopping_cart_checkout'
 
   @query('sales-pad')
@@ -31,7 +31,7 @@ export class SalesView extends LiteElement {
         opacity: 0;
         pointer-events: none;
       }
-      sales-grid {
+      shop-sales-grid {
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         transform: translateX(0%);
         z-index: 0;

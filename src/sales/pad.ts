@@ -23,7 +23,7 @@ export class SalesPad extends LiteElement {
         box-sizing: border-box;
       }
 
-      sales-receipt {
+      shop-sales-receipt {
         margin-bottom: 24px;
       }
     `
