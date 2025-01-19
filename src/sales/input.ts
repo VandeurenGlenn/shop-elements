@@ -6,7 +6,7 @@ import './receipt.js'
 @customElement('shop-sales-input')
 export class ShopSalesInput extends LiteElement {
   firstRender() {
-    this.shadowRoot.addEventListener('click', ({ target }: CustomEvent) => {
+    this.addListener('click', ({ target }: CustomEvent) => {
       // @ts-ignore
       this.dispatchEvent(new CustomEvent('input-click', { detail: target.getAttribute('input-tap') }))
     })
@@ -22,7 +22,7 @@ export class ShopSalesInput extends LiteElement {
         flex-direction: column;
         height: fit-content;
         width: 100%;
-        max-width: 228px;
+        max-width: var(--shop-sales-input-max-width, 228px);
       }
 
       custom-elevation {

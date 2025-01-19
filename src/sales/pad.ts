@@ -18,7 +18,7 @@ export class SalesPad extends LiteElement {
         width: 100%;
         height: 100%;
         flex-direction: column;
-        max-width: 240px;
+        max-width: var(--shop-sales-pad-max-width, 240px);
         padding-right: 12px;
         box-sizing: border-box;
       }
@@ -91,9 +91,13 @@ export class SalesPad extends LiteElement {
 
   render() {
     return html`
-      <shop-sales-receipt @selection=${(event) => this.onReceiptSelection(event)}></shop-sales-receipt>
+      <shop-sales-receipt
+        part="receipt"
+        @selection=${(event) => this.onReceiptSelection(event)}></shop-sales-receipt>
       <flex-it></flex-it>
-      <shop-sales-input @input-click=${(event) => this.inputTap(event)}></shop-sales-input>
+      <shop-sales-input
+        part="input"
+        @input-click=${(event) => this.inputTap(event)}></shop-sales-input>
     `
   }
 }

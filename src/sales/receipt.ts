@@ -27,10 +27,10 @@ export class ShopSalesReceipt extends LiteElement {
         pointer-events: none;
         display: flex;
         flex-direction: column;
-        max-width: 255px;
+        max-width: var(--shop-sales-receipt-max-width, 255px);
         width: 100%;
         height: 100%;
-        max-height: calc(100% - 272px);
+        max-height: var(--shop-sales-receipt-max-height, calc(100% - 272px));
         position: relative;
         border-radius: var(--md-sys-shape-corner-extra-large);
         background: var(--md-sys-color-surface-variant);
